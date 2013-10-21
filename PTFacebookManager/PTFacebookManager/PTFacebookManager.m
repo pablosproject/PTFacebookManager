@@ -9,29 +9,29 @@
 #import "PTFacebookManager.h"
 
 // Define this block to pass a generic action to FB session opener completion block
-typedef void (^TTFacebookSessionCompletionBlock)(FBSession *session, FBSessionState status, NSError *error);
+typedef void (^PTFacebookSessionCompletionBlock)(FBSession *session, FBSessionState status, NSError *error);
 
 @implementation PTFacebookManager
 
-pragma mark - Singleton
+#pragma mark - Singleton
 
-+ (TTFacebook *)sharedInstance
++ (PTFacebookManager *)sharedInstance
 {
-    static TTFacebook *sharedInstance = nil;
+    static PTFacebookManager *sharedInstance = nil;
     static dispatch_once_t onceToken;
     
     dispatch_once(&onceToken, ^{
-        sharedInstance = [[TTFacebook alloc] init];
+        sharedInstance = [[PTFacebookManager alloc] init];
     });
     return sharedInstance;
 }
 
 #pragma mark - Login
 
-- (void)logIn:(TTFacebookAuthorizationType)authType
+- (void)logIn:(PTFacebookAuthorizationType)authType
 {
     FBSession *session = [FBSession activeSession];
-    __weak TTFacebook *weakSelf = self;
+    __weak PTFacebookManager *weakSelf = self;
     
     // Check if the session is open or if there's a valid token (the user has already login)
     if (session.state == FBSessionStateCreatedTokenLoaded || session.state == FBSessionStateOpen)
@@ -51,7 +51,7 @@ pragma mark - Singleton
              if (status == FBSessionStateClosedLoginFailed)
                  [FBSession.activeSession closeAndClearTokenInformation];
              
-             [weakSelf.delegate facebookAPIFailed:TTFAcebookLoginFailed];
+             [weakSelf.delegate facebookAPIFailed:PTFAcebookLoginFailed];
          }
          if (session.state == FBSessionStateOpen) // If correctly open session, notify delegate
              [weakSelf.delegate loginSucceed];
@@ -79,7 +79,7 @@ pragma mark - Singleton
 
 #pragma mark - Graph API and login
 
-- (void)getUserGraphInfoWithCompletionBlock:(TTFacebookUserBlock)completion
+- (void)getUserGraphInfoWithCompletionBlock:(PTFacebookUserBlock)completion
 {
     FBSession *session;
     
@@ -90,8 +90,8 @@ pragma mark - Singleton
     else
     {
         // If session is not open open with read permission (user only need read permission)
-        __weak TTFacebook *weakSelf = self;
-        [self openSessionWithAuth:TTFacebookReadPermission completionBlock:^(FBSession *session, FBSessionState status, NSError *error)
+        __weak PTFacebookManager *weakSelf = self;
+        [self openSessionWithAuth:PTFacebookReadPermission completionBlock:^(FBSession *session, FBSessionState status, NSError *error)
          {
              if (error)
              {
@@ -115,8 +115,8 @@ pragma mark - Singleton
         [self requestUser];
     else
     {
-        __weak TTFacebook *weakSelf = self;
-        [self openSessionWithAuth:TTFacebookReadPermission completionBlock:^(FBSession *session, FBSessionState status, NSError *error)
+        __weak PTFacebookManager *weakSelf = self;
+        [self openSessionWithAuth:PTFacebookReadPermission completionBlock:^(FBSession *session, FBSessionState status, NSError *error)
          {
              if (error)
              {
@@ -125,7 +125,7 @@ pragma mark - Singleton
                  {
                      [FBSession.activeSession closeAndClearTokenInformation];
                      [weakSelf.delegate
-                      facebookAPIFailed:TTFacebookOpenSessionFail];
+                      facebookAPIFailed:PTFacebookOpenSessionFail];
                  }
              }
              if (status == FBSessionStateOpen)
@@ -142,7 +142,7 @@ pragma mark - Singleton
 
 #pragma mark - Request user graph
 
-- (void)requestUserWithCompletionBlock:(TTFacebookUserBlock)completion
+- (void)requestUserWithCompletionBlock:(PTFacebookUserBlock)completion
 {
     [[FBRequest requestForMe] startWithCompletionHandler:^(FBRequestConnection *connection, NSDictionary<FBGraphUser> *user, NSError *error)
      {
@@ -156,7 +156,7 @@ pragma mark - Singleton
 
 - (void)requestUser
 {
-    __weak TTFacebook *weakSelf = self;
+    __weak PTFacebookManager *weakSelf = self;
     
     [[FBRequest requestForMe] startWithCompletionHandler:^(FBRequestConnection *connection, NSDictionary<FBGraphUser> *user, NSError *error)
      {
@@ -164,7 +164,7 @@ pragma mark - Singleton
          {
              NSLog(@"%@", [error localizedDescription]);
              [weakSelf.delegate
-              facebookAPIFailed:TTFacebookGraphCallFail];
+              facebookAPIFailed:PTFacebookGraphCallFail];
          }
          
          [weakSelf.delegate
@@ -174,7 +174,7 @@ pragma mark - Singleton
 
 #pragma mark - Session management
 
-- (void)openSessionWithAuth:(TTFacebookAuthorizationType)authType completionBlock:(TTFacebookSessionCompletionBlock)completion
+- (void)openSessionWithAuth:(PTFacebookAuthorizationType)authType completionBlock:(PTFacebookSessionCompletionBlock)completion
 {
     FBSession *session;
     
@@ -186,7 +186,7 @@ pragma mark - Singleton
     
     switch (authType)
     {
-        case TTFacebookReadPermission:
+        case PTFacebookReadPermission:
         {
             [FBSession openActiveSessionWithReadPermissions:self.readPermission
                                                allowLoginUI:YES
@@ -196,7 +196,7 @@ pragma mark - Singleton
                                           }];
         }
             break;
-        case TTFacebookPublishPermission:
+        case PTFacebookPublishPermission:
         {
             [FBSession openActiveSessionWithPublishPermissions:self.publishPermission
                                                defaultAudience:FBSessionDefaultAudienceEveryone
@@ -206,7 +206,7 @@ pragma mark - Singleton
                                              }];
         }
             break;
-        case TTFacebookBothPermission:
+        case PTFacebookBothPermission:
         {
             NSArray *totalPermission = [self.readPermission arrayByAddingObjectsFromArray:self.publishPermission];
             [FBSession openActiveSessionWithPublishPermissions:totalPermission
@@ -231,26 +231,26 @@ pragma mark - Singleton
     return [FBSession activeSession].accessTokenData.accessToken;
 }
 
-- (NSDate *)getTokenExpirationDate
+- (NSDate *)gePTokenExpirationDate
 {
     return [FBSession activeSession].accessTokenData.expirationDate;
 }
 
 #pragma mark - Utilities
 
-- (BOOL)verifyActualPermission:(NSArray *)sessionPermissionArray forAuthorizationType:(TTFacebookAuthorizationType)authType
+- (BOOL)verifyActualPermission:(NSArray *)sessionPermissionArray forAuthorizationType:(PTFacebookAuthorizationType)authType
 {
     NSArray *actualPermissionArray;
     
     switch (authType)
     {
-        case TTFacebookReadPermission:
+        case PTFacebookReadPermission:
             actualPermissionArray = self.readPermission;
             break;
-        case TTFacebookPublishPermission:
+        case PTFacebookPublishPermission:
             actualPermissionArray = self.publishPermission;
             break;
-        case TTFacebookBothPermission:
+        case PTFacebookBothPermission:
             actualPermissionArray = [self.readPermission arrayByAddingObjectsFromArray:self.publishPermission];
             break;
         default:

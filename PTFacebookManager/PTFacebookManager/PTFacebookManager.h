@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <FacebookSDK/FacebookSDK.h>
 
-ypedef void (^PTFacebookUserBlock)(NSDictionary<FBGraphUser> *user,  NSError *error);
+typedef void (^PTFacebookUserBlock)(NSDictionary<FBGraphUser> *user,  NSError *error);
 
 typedef NS_ENUM (NSInteger, PTFacebookError)
 {
@@ -54,7 +54,7 @@ typedef NS_ENUM (NSInteger, PTFacebookAuthorizationType)
  *
  *  @return The only shared instance of PTFacebook manager
  */
-+ (PTFacebook *)sharedInstance;
++ (PTFacebookManager *)sharedInstance;
 
 /**
  *  Create a session, i.e. make the user log in. It the user is already logged in this method does not anything and notify on successful login.
