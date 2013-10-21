@@ -1,0 +1,475 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		48BBDD8F181554F000DAEBF2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48BBDD8E181554F000DAEBF2 /* Foundation.framework */; };
+		48BBDD94181554F000DAEBF2 /* PTFacebookManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 48BBDD93181554F000DAEBF2 /* PTFacebookManager.h */; };
+		48BBDD96181554F000DAEBF2 /* PTFacebookManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BBDD95181554F000DAEBF2 /* PTFacebookManager.m */; };
+		48BBDD9D181554F100DAEBF2 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48BBDD9C181554F100DAEBF2 /* XCTest.framework */; };
+		48BBDD9E181554F100DAEBF2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48BBDD8E181554F000DAEBF2 /* Foundation.framework */; };
+		48BBDDA0181554F100DAEBF2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48BBDD9F181554F100DAEBF2 /* UIKit.framework */; };
+		48BBDDA3181554F100DAEBF2 /* libPTFacebookManager.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 48BBDD8B181554F000DAEBF2 /* libPTFacebookManager.a */; };
+		48BBDDA9181554F100DAEBF2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 48BBDDA7181554F100DAEBF2 /* InfoPlist.strings */; };
+		48BBDDAB181554F100DAEBF2 /* PTFacebookManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 48BBDDAA181554F100DAEBF2 /* PTFacebookManagerTests.m */; };
+		BD531EA1943347608C6D00F1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C72BEED92947408AA9AAFB9D /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		48BBDDA1181554F100DAEBF2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 48BBDD83181554F000DAEBF2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 48BBDD8A181554F000DAEBF2;
+			remoteInfo = PTFacebookManager;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		48BBDD89181554F000DAEBF2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				48BBDD94181554F000DAEBF2 /* PTFacebookManager.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		48BBDD8B181554F000DAEBF2 /* libPTFacebookManager.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPTFacebookManager.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		48BBDD8E181554F000DAEBF2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		48BBDD92181554F000DAEBF2 /* PTFacebookManager-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PTFacebookManager-Prefix.pch"; sourceTree = "<group>"; };
+		48BBDD93181554F000DAEBF2 /* PTFacebookManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTFacebookManager.h; sourceTree = "<group>"; };
+		48BBDD95181554F000DAEBF2 /* PTFacebookManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTFacebookManager.m; sourceTree = "<group>"; };
+		48BBDD9B181554F100DAEBF2 /* PTFacebookManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PTFacebookManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		48BBDD9C181554F100DAEBF2 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		48BBDD9F181554F100DAEBF2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		48BBDDA6181554F100DAEBF2 /* PTFacebookManagerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PTFacebookManagerTests-Info.plist"; sourceTree = "<group>"; };
+		48BBDDA8181554F100DAEBF2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		48BBDDAA181554F100DAEBF2 /* PTFacebookManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PTFacebookManagerTests.m; sourceTree = "<group>"; };
+		76F16D7027D346D691014A7F /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		C72BEED92947408AA9AAFB9D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		48BBDD88181554F000DAEBF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48BBDD8F181554F000DAEBF2 /* Foundation.framework in Frameworks */,
+				BD531EA1943347608C6D00F1 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48BBDD98181554F100DAEBF2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48BBDD9D181554F100DAEBF2 /* XCTest.framework in Frameworks */,
+				48BBDDA3181554F100DAEBF2 /* libPTFacebookManager.a in Frameworks */,
+				48BBDDA0181554F100DAEBF2 /* UIKit.framework in Frameworks */,
+				48BBDD9E181554F100DAEBF2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		48BBDD82181554F000DAEBF2 = {
+			isa = PBXGroup;
+			children = (
+				48BBDD90181554F000DAEBF2 /* PTFacebookManager */,
+				48BBDDA4181554F100DAEBF2 /* PTFacebookManagerTests */,
+				48BBDD8D181554F000DAEBF2 /* Frameworks */,
+				48BBDD8C181554F000DAEBF2 /* Products */,
+				76F16D7027D346D691014A7F /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		48BBDD8C181554F000DAEBF2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				48BBDD8B181554F000DAEBF2 /* libPTFacebookManager.a */,
+				48BBDD9B181554F100DAEBF2 /* PTFacebookManagerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		48BBDD8D181554F000DAEBF2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				48BBDD8E181554F000DAEBF2 /* Foundation.framework */,
+				48BBDD9C181554F100DAEBF2 /* XCTest.framework */,
+				48BBDD9F181554F100DAEBF2 /* UIKit.framework */,
+				C72BEED92947408AA9AAFB9D /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		48BBDD90181554F000DAEBF2 /* PTFacebookManager */ = {
+			isa = PBXGroup;
+			children = (
+				48BBDD93181554F000DAEBF2 /* PTFacebookManager.h */,
+				48BBDD95181554F000DAEBF2 /* PTFacebookManager.m */,
+				48BBDD91181554F000DAEBF2 /* Supporting Files */,
+			);
+			path = PTFacebookManager;
+			sourceTree = "<group>";
+		};
+		48BBDD91181554F000DAEBF2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				48BBDD92181554F000DAEBF2 /* PTFacebookManager-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		48BBDDA4181554F100DAEBF2 /* PTFacebookManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				48BBDDAA181554F100DAEBF2 /* PTFacebookManagerTests.m */,
+				48BBDDA5181554F100DAEBF2 /* Supporting Files */,
+			);
+			path = PTFacebookManagerTests;
+			sourceTree = "<group>";
+		};
+		48BBDDA5181554F100DAEBF2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				48BBDDA6181554F100DAEBF2 /* PTFacebookManagerTests-Info.plist */,
+				48BBDDA7181554F100DAEBF2 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		48BBDD8A181554F000DAEBF2 /* PTFacebookManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48BBDDAE181554F100DAEBF2 /* Build configuration list for PBXNativeTarget "PTFacebookManager" */;
+			buildPhases = (
+				A22228AFBE4440E0A18C229C /* Check Pods Manifest.lock */,
+				48BBDD87181554F000DAEBF2 /* Sources */,
+				48BBDD88181554F000DAEBF2 /* Frameworks */,
+				48BBDD89181554F000DAEBF2 /* CopyFiles */,
+				B99447FDD83040D68D406653 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PTFacebookManager;
+			productName = PTFacebookManager;
+			productReference = 48BBDD8B181554F000DAEBF2 /* libPTFacebookManager.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		48BBDD9A181554F100DAEBF2 /* PTFacebookManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 48BBDDB1181554F100DAEBF2 /* Build configuration list for PBXNativeTarget "PTFacebookManagerTests" */;
+			buildPhases = (
+				48BBDD97181554F100DAEBF2 /* Sources */,
+				48BBDD98181554F100DAEBF2 /* Frameworks */,
+				48BBDD99181554F100DAEBF2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				48BBDDA2181554F100DAEBF2 /* PBXTargetDependency */,
+			);
+			name = PTFacebookManagerTests;
+			productName = PTFacebookManagerTests;
+			productReference = 48BBDD9B181554F100DAEBF2 /* PTFacebookManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		48BBDD83181554F000DAEBF2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = PaoloTagliani;
+			};
+			buildConfigurationList = 48BBDD86181554F000DAEBF2 /* Build configuration list for PBXProject "PTFacebookManager" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 48BBDD82181554F000DAEBF2;
+			productRefGroup = 48BBDD8C181554F000DAEBF2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				48BBDD8A181554F000DAEBF2 /* PTFacebookManager */,
+				48BBDD9A181554F100DAEBF2 /* PTFacebookManagerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		48BBDD99181554F100DAEBF2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48BBDDA9181554F100DAEBF2 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A22228AFBE4440E0A18C229C /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B99447FDD83040D68D406653 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		48BBDD87181554F000DAEBF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48BBDD96181554F000DAEBF2 /* PTFacebookManager.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48BBDD97181554F100DAEBF2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				48BBDDAB181554F100DAEBF2 /* PTFacebookManagerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		48BBDDA2181554F100DAEBF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 48BBDD8A181554F000DAEBF2 /* PTFacebookManager */;
+			targetProxy = 48BBDDA1181554F100DAEBF2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		48BBDDA7181554F100DAEBF2 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				48BBDDA8181554F100DAEBF2 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		48BBDDAC181554F100DAEBF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		48BBDDAD181554F100DAEBF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		48BBDDAF181554F100DAEBF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76F16D7027D346D691014A7F /* Pods.xcconfig */;
+			buildSettings = {
+				DSTROOT = /tmp/PTFacebookManager.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PTFacebookManager/PTFacebookManager-Prefix.pch";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		48BBDDB0181554F100DAEBF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76F16D7027D346D691014A7F /* Pods.xcconfig */;
+			buildSettings = {
+				DSTROOT = /tmp/PTFacebookManager.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PTFacebookManager/PTFacebookManager-Prefix.pch";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		48BBDDB2181554F100DAEBF2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PTFacebookManager/PTFacebookManager-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "PTFacebookManagerTests/PTFacebookManagerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		48BBDDB3181554F100DAEBF2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PTFacebookManager/PTFacebookManager-Prefix.pch";
+				INFOPLIST_FILE = "PTFacebookManagerTests/PTFacebookManagerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		48BBDD86181554F000DAEBF2 /* Build configuration list for PBXProject "PTFacebookManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48BBDDAC181554F100DAEBF2 /* Debug */,
+				48BBDDAD181554F100DAEBF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48BBDDAE181554F100DAEBF2 /* Build configuration list for PBXNativeTarget "PTFacebookManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48BBDDAF181554F100DAEBF2 /* Debug */,
+				48BBDDB0181554F100DAEBF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		48BBDDB1181554F100DAEBF2 /* Build configuration list for PBXNativeTarget "PTFacebookManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				48BBDDB2181554F100DAEBF2 /* Debug */,
+				48BBDDB3181554F100DAEBF2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 48BBDD83181554F000DAEBF2 /* Project object */;
+}
