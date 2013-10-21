@@ -1,0 +1,4 @@
+PTFacebookManager
+=================
+
+Wrapper around FacebookSDK
