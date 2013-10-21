@@ -231,7 +231,7 @@ typedef void (^PTFacebookSessionCompletionBlock)(FBSession *session, FBSessionSt
     return [FBSession activeSession].accessTokenData.accessToken;
 }
 
-- (NSDate *)gePTokenExpirationDate
+- (NSDate *)getTokenExpirationDate
 {
     return [FBSession activeSession].accessTokenData.expirationDate;
 }

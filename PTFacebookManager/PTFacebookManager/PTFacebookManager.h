@@ -85,7 +85,7 @@ typedef NS_ENUM (NSInteger, PTFacebookAuthorizationType)
  *
  *  @return current token expiration date
  */
-- (NSDate *)gePTokenExpirationDate;
+- (NSDate *)getTokenExpirationDate;
 
 /**
  *  Call the Graph API to retrive the data of the user ("/me" endpoint). If the user is not logged in, it automatically create the session and log the user.
@@ -103,6 +103,7 @@ typedef NS_ENUM (NSInteger, PTFacebookAuthorizationType)
 - (void)getUserGraphInfoWithCompletionBlock:(PTFacebookUserBlock)completion;
 
 /**
+ *  TO BE DONE IN NEXT RELEASE
  *  Call the Graph API using the string passed as a parameter. If the user is not logged in, it automatically create the session and log the user.
  *  It calls the delegate method userGraphInfoReceiver on success or graphError on failure.
  *  @param graphEndPoint The string indicating the endpoint
